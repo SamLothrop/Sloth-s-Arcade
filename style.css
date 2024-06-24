@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'SlothFont';
+    src: url('SuperPixel-m2L8j.ttf') format('truetype');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'SlothFont', Arial, sans-serif;
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+h1:hover {
+    font-family: 'SlothFont', Arial, sans-serif;
+    font-size: 36px;
+    background-image: linear-gradient(to right,
+            #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+#loginButton {
+    font-family: 'SlothFont', Arial, sans-serif;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, .0);
+    color: rgb(255, 255, 255);
+    border: none;
+    text-align: center;
+    margin-right: 50px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#loginButton:hover {
+    font-family: 'SlothFont', Arial, sans-serif;
+    font-size: 16px;
+    background-image: linear-gradient(to right,
+            #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* Adjust as needed */
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    color: white;
+    z-index: 10;
+    /* Ensure it is above the canvas */
+    padding: 0 20px;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Behind the header */
+}
